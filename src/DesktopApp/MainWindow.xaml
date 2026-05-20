@@ -13,23 +13,22 @@
             Orientation="Horizontal"
             Margin="0,0,0,10">
             <Button
-                Name="btnRefresh"
                 Width="100"
                 Height="30"
                 Margin="0,0,10,0"
                 Content="Refresh"
-                Click="Button_Click" />
+                Command="{Binding RefreshCommand}" />
             <TextBlock
-                Name="txtStatus"
                 VerticalAlignment="Center"
-                FontWeight="Bold" />
+                FontWeight="Bold"
+                Text="{Binding StatusMessage}" />
         </StackPanel>
         <!-- Data grid for measurements -->
         <DataGrid
-            Name="dataGrid"
             AutoGenerateColumns="True"
             IsReadOnly="True"
             DockPanel.Dock="Bottom"
-            Height="400" />
+            Height="400"
+            ItemsSource="{Binding Measurements}" />
     </DockPanel>
 </Window>

@@ -5,6 +5,7 @@ public class Program
     public static async Task Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        builder.WebHost.UseUrls("http://localhost:5100");
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();

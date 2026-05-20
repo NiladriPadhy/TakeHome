@@ -1,0 +1,46 @@
+# Build outputs
+bin/
+obj/
+out/
+build/
+dist/
+
+# .NET specific
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+*.tmp
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
