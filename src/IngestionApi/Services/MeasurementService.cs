@@ -50,7 +50,7 @@ public class MeasurementService : IMeasurementService
     {
         var since = query.Since ?? DateTimeOffset.UtcNow.AddMinutes(-5);
         var all = await _store.QueryAsync(query.Type, since);
-        var list = all.ToList();
+        var list = all.OrderByDescending(m => m.Timestamp).ToList();
         var totalCount = list.Count;
         var items = list.Skip(query.Skip).Take(query.Take).ToList();
 
