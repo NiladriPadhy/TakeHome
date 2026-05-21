@@ -5,6 +5,9 @@ x64/
 x86/
 [Bb]in/
 [Oo]bj/
+out/
+build/
+dist/
 [Ll]og/
 [Ll]ogs/
 
@@ -15,11 +18,13 @@ x86/
 *.userosscache
 *.sln.docstates
 *.rsuser
+*.userprefs
 
 # NuGet
 **/[Pp]ackages/*
 !**/[Pp]ackages/build/
 *.nupkg
+*.snupkg
 **/packages/
 project.lock.json
 project.fragment.lock.json
@@ -33,9 +38,11 @@ project.assets.json
 *.nuget.g.targets
 *.nuget.dgspec.json
 
-# Rider
+# IDE
 .idea/
 *.sln.iml
+*.swp
+*.swo
 
 # macOS
 .DS_Store
@@ -47,6 +54,13 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# User-specific files
+# Environment
 *.env
-*.env.local
+*.env.*
+*.tmp
+
+# Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
